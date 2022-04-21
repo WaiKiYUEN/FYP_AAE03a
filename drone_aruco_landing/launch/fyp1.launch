@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>  
+    <!-- Directory for the px4 fimware -->
+    <arg name="firm_dir" default="/home/hubertleung99/Firmware"/>
+    <arg name='world' default='fyp1'/>
+
+    <!-- Start the services -->
+    <node pkg="drone_aruco_landing" name="uav_pos_services"  type="target_pos_servers.py" output="screen"></node>
+    <node pkg="drone_aruco_landing" name="marker_detector" type="MarkerDetection.py" output="screen"></node>
+    <node pkg="drone_aruco_landing" name="aruco_navigation" type="ArucoNavigationServers.py" output="screen"></node>
+
+    <node pkg="drone_aruco_landing" name="uav"  type="px4_launch_gazebo1.sh" args="$(arg firm_dir) $(arg world) $(arg vehicle) $(arg sdf)" output="screen" />
+</launch>
