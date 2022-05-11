@@ -128,6 +128,7 @@ class ArucoNavigationController():
             #print(np.linalg.norm(self.markerPos[0:3] - np.array([0.0, 0.0, -self.markerHeight])))
             self.cmd_vel_pub.publish(new_sp)
             '''
+            ##legacy code for static landing##
             tar_pos = mavros_msgs.msg.PositionTarget(header=mavros.setpoint.Header(frame_id="att_pose", stamp=rospy.Time.now()), )
             tar_pos.position.x = self.local_pos[0] + self.markerPos[1]
             tar_pos.position.y = self.local_pos[1] - self.markerPos[0]
