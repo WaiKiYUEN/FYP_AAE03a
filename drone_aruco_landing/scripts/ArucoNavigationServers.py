@@ -119,18 +119,11 @@ class ArucoNavigationController():
         failtime = 0
         #while np.linalg.norm(self.markerPos[0:3] - np.array([0.0, 0.0, -self.markerHeight])) > 0.5 and (rospy.Time.now() - ts < rospy.Duration(timeOut)):
         while (rospy.Time.now() - ts < rospy.Duration(timeOut)):        
-            if timeOut == 7:
-                new_sp = TwistStamped()
-                new_sp.twist.linear.x = xPID(-self.markerPos[1])
-                new_sp.twist.linear.y = yPID(self.markerPos[0] + 0.35)
-                new_sp.twist.linear.z = zPID(-self.markerPos[2])
-                new_sp.twist.angular.z = yawPID(self.markerPos[3])
-            else:
-                new_sp = TwistStamped()
-                new_sp.twist.linear.x = xPID(-self.markerPos[1])
-                new_sp.twist.linear.y = yPID(self.markerPos[0])
-                new_sp.twist.linear.z = zPID(-self.markerPos[2])
-                new_sp.twist.angular.z = yawPID(self.markerPos[3])
+            new_sp = TwistStamped()
+            new_sp.twist.linear.x = xPID(-self.markerPos[1])
+            new_sp.twist.linear.y = yPID(self.markerPos[0])
+            new_sp.twist.linear.z = zPID(-self.markerPos[2])
+            new_sp.twist.angular.z = yawPID(self.markerPos[3])
             
             #print(np.linalg.norm(self.markerPos[0:3] - np.array([0.0, 0.0, -self.markerHeight])))
             self.cmd_vel_pub.publish(new_sp)
