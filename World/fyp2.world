@@ -1,0 +1,1298 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+  <actor name='aruco_visual_marker_1'>
+    <link name='marker'>
+      <pose frame=''>0 0 0 0 0 0</pose>
+      <visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.55 0.55 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/scripts</uri>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/textures</uri>
+            <name>ArucoVisualMarker1/Marker</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>1 1 1 0</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual>
+      <collision name='collision'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.55 0.55 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <static>0</static>
+        <script>
+          <loop>true</loop>
+          <auto_start>true</auto_start>
+          <trajectory id="0" type="square">
+             <!--waypoint>
+                <time>0.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>1.0</time>
+                <pose>-3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>2.0</time>
+                <pose>-3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>3.0</time>
+                <pose>-3 -2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>5.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>10.0</time>
+                <pose>-3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>15.0</time>
+                <pose>-3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>20.0</time>
+                <pose>-3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-3 2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>21.0</time>
+                <pose>-3 2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>22.0</time>
+                <pose>-3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>23.0</time>
+                <pose>-3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>24.0</time>
+                <pose>-3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>26.0</time>
+                <pose>-2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>27.0</time>
+                <pose>-2.25 3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>35.0</time>
+                <pose>-2 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>40.0</time>
+                <pose>-1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>45.0</time>
+                <pose>0 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>55.0</time>
+                <pose>2 3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>45.0</time>
+                <pose>2.25 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>46.0</time>
+                <pose>2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>47.0</time>
+                <pose>2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>48.0</time>
+                <pose>3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>49.0</time>
+                <pose>3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>51.0</time>
+                <pose>3 2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>65.0</time>
+                <pose>3 2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>80.0</time>
+                <pose>3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>85.0</time>
+                <pose>3 -2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>69.0</time>
+                <pose>3 -2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>71.0</time>
+                <pose>3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>72.0</time>
+                <pose>3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>73.0</time>
+                <pose>2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>74.0</time>
+                <pose>2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>2.25 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>95.0</time>
+                <pose>2 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>100.0</time>
+                <pose>1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>105.0</time>
+                <pose>0 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>110.0</time>
+                <pose>-1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>115.0</time>
+                <pose>-2 -3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>93.0</time>
+                <pose>-2.25 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>94.0</time>
+                <pose>-2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>95.0</time>
+                <pose>-2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>96.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>125.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+    <plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
+    <scaling collision="marker_collision" scale="
+        0.55
+        0.55
+        0.05
+    "/>
+    </plugin>
+  </actor>
+  <actor name='side_pod_1'>
+    <link name='wall_1'>
+      <pose frame=''>0.32 0 0 0 0 0</pose>
+      <!--visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.05 0.55 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/scripts</uri>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/textures</uri>
+            <name>ArucoVisualMarker1/Marker</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>1 1 1 0</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual-->
+      <collision name='collision'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.55 0.12</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <static>0</static>
+        <script>
+          <loop>true</loop>
+          <auto_start>true</auto_start>
+          <trajectory id="0" type="square">
+             <!--waypoint>
+                <time>0.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>1.0</time>
+                <pose>-3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>2.0</time>
+                <pose>-3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>3.0</time>
+                <pose>-3 -2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>5.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>10.0</time>
+                <pose>-3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>15.0</time>
+                <pose>-3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>20.0</time>
+                <pose>-3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-3 2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>21.0</time>
+                <pose>-3 2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>22.0</time>
+                <pose>-3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>23.0</time>
+                <pose>-3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>24.0</time>
+                <pose>-3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>26.0</time>
+                <pose>-2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>27.0</time>
+                <pose>-2.25 3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>35.0</time>
+                <pose>-2 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>40.0</time>
+                <pose>-1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>45.0</time>
+                <pose>0 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>55.0</time>
+                <pose>2 3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>45.0</time>
+                <pose>2.25 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>46.0</time>
+                <pose>2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>47.0</time>
+                <pose>2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>48.0</time>
+                <pose>3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>49.0</time>
+                <pose>3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>51.0</time>
+                <pose>3 2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>65.0</time>
+                <pose>3 2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>80.0</time>
+                <pose>3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>85.0</time>
+                <pose>3 -2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>69.0</time>
+                <pose>3 -2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>71.0</time>
+                <pose>3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>72.0</time>
+                <pose>3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>73.0</time>
+                <pose>2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>74.0</time>
+                <pose>2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>2.25 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>95.0</time>
+                <pose>2 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>100.0</time>
+                <pose>1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>105.0</time>
+                <pose>0 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>110.0</time>
+                <pose>-1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>115.0</time>
+                <pose>-2 -3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>93.0</time>
+                <pose>-2.25 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>94.0</time>
+                <pose>-2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>95.0</time>
+                <pose>-2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>96.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>125.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+    <plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
+    <scaling collision="wall_1_collision" scale="
+        0.01
+        0.55
+        0.12
+    "/>
+    </plugin>
+  </actor>
+  <actor name='side_pod_2'>
+    <link name='wall_2'>
+      <pose frame=''>-0.32 0 0 0 0 0</pose>
+      <!--visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.05 0.55 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/scripts</uri>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/textures</uri>
+            <name>ArucoVisualMarker1/Marker</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>1 1 1 0</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual-->
+      <collision name='collision'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.05 0.55 0.12</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <static>0</static>
+        <script>
+          <loop>true</loop>
+          <auto_start>true</auto_start>
+          <trajectory id="0" type="square">
+             <!--waypoint>
+                <time>0.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>1.0</time>
+                <pose>-3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>2.0</time>
+                <pose>-3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>3.0</time>
+                <pose>-3 -2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>5.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>10.0</time>
+                <pose>-3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>15.0</time>
+                <pose>-3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>20.0</time>
+                <pose>-3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-3 2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>21.0</time>
+                <pose>-3 2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>22.0</time>
+                <pose>-3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>23.0</time>
+                <pose>-3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>24.0</time>
+                <pose>-3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>26.0</time>
+                <pose>-2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>27.0</time>
+                <pose>-2.25 3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>35.0</time>
+                <pose>-2 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>40.0</time>
+                <pose>-1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>45.0</time>
+                <pose>0 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>55.0</time>
+                <pose>2 3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>45.0</time>
+                <pose>2.25 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>46.0</time>
+                <pose>2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>47.0</time>
+                <pose>2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>48.0</time>
+                <pose>3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>49.0</time>
+                <pose>3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>51.0</time>
+                <pose>3 2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>65.0</time>
+                <pose>3 2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>80.0</time>
+                <pose>3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>85.0</time>
+                <pose>3 -2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>69.0</time>
+                <pose>3 -2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>71.0</time>
+                <pose>3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>72.0</time>
+                <pose>3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>73.0</time>
+                <pose>2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>74.0</time>
+                <pose>2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>2.25 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>95.0</time>
+                <pose>2 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>100.0</time>
+                <pose>1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>105.0</time>
+                <pose>0 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>110.0</time>
+                <pose>-1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>115.0</time>
+                <pose>-2 -3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>93.0</time>
+                <pose>-2.25 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>94.0</time>
+                <pose>-2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>95.0</time>
+                <pose>-2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>96.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>125.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+    <plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
+    <scaling collision="wall_2_collision" scale="
+        0.01
+        0.55
+        0.12
+    "/>
+    </plugin>
+  </actor>
+  <actor name='side_pod_3'>
+    <link name='wall_3'>
+      <pose frame=''>0 0.3 0 0 0 0</pose>
+      <!--visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.55 0.05 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/scripts</uri>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/textures</uri>
+            <name>ArucoVisualMarker1/Marker</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>1 1 1 0</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual-->
+      <collision name='collision'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.55 0.05 0.12</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <static>0</static>
+        <script>
+          <loop>true</loop>
+          <auto_start>true</auto_start>
+          <trajectory id="0" type="square">
+             <!--waypoint>
+                <time>0.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>1.0</time>
+                <pose>-3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>2.0</time>
+                <pose>-3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>3.0</time>
+                <pose>-3 -2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>5.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>10.0</time>
+                <pose>-3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>15.0</time>
+                <pose>-3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>20.0</time>
+                <pose>-3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-3 2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>21.0</time>
+                <pose>-3 2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>22.0</time>
+                <pose>-3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>23.0</time>
+                <pose>-3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>24.0</time>
+                <pose>-3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>26.0</time>
+                <pose>-2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>27.0</time>
+                <pose>-2.25 3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>35.0</time>
+                <pose>-2 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>40.0</time>
+                <pose>-1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>45.0</time>
+                <pose>0 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>55.0</time>
+                <pose>2 3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>45.0</time>
+                <pose>2.25 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>46.0</time>
+                <pose>2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>47.0</time>
+                <pose>2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>48.0</time>
+                <pose>3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>49.0</time>
+                <pose>3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>51.0</time>
+                <pose>3 2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>65.0</time>
+                <pose>3 2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>80.0</time>
+                <pose>3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>85.0</time>
+                <pose>3 -2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>69.0</time>
+                <pose>3 -2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>71.0</time>
+                <pose>3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>72.0</time>
+                <pose>3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>73.0</time>
+                <pose>2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>74.0</time>
+                <pose>2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>2.25 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>95.0</time>
+                <pose>2 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>100.0</time>
+                <pose>1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>105.0</time>
+                <pose>0 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>110.0</time>
+                <pose>-1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>115.0</time>
+                <pose>-2 -3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>93.0</time>
+                <pose>-2.25 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>94.0</time>
+                <pose>-2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>95.0</time>
+                <pose>-2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>96.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>125.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+    <plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
+    <scaling collision="wall_3_collision" scale="
+        0.55
+        0.01
+        0.12
+    "/>
+    </plugin>
+  </actor>
+  <actor name='side_pod_4'>
+    <link name='wall_4'>
+      <pose frame=''>0 -0.32 0 0 0 0</pose>
+      <!--visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.55 0.05 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/scripts</uri>
+            <uri>/home/hubertleung99/Firmware/Tools/sitl_gazebo/models/aruco_visual_marker_1/materials/textures</uri>
+            <name>ArucoVisualMarker1/Marker</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>1 1 1 0</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <cast_shadows>1</cast_shadows>
+        <transparency>0</transparency>
+      </visual-->
+      <collision name='collision'>
+        <laser_retro>0</laser_retro>
+        <max_contacts>10</max_contacts>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.55 0.05 0.12</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <static>0</static>
+        <script>
+          <loop>true</loop>
+          <auto_start>true</auto_start>
+          <trajectory id="0" type="square">
+             <!--waypoint>
+                <time>0.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>1.0</time>
+                <pose>-3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>2.0</time>
+                <pose>-3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>3.0</time>
+                <pose>-3 -2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>5.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>10.0</time>
+                <pose>-3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>15.0</time>
+                <pose>-3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>20.0</time>
+                <pose>-3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-3 2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>21.0</time>
+                <pose>-3 2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>22.0</time>
+                <pose>-3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>23.0</time>
+                <pose>-3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>24.0</time>
+                <pose>-3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>25.0</time>
+                <pose>-2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>26.0</time>
+                <pose>-2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>27.0</time>
+                <pose>-2.25 3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>35.0</time>
+                <pose>-2 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>40.0</time>
+                <pose>-1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>45.0</time>
+                <pose>0 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>1 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>55.0</time>
+                <pose>2 3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>45.0</time>
+                <pose>2.25 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>46.0</time>
+                <pose>2.5 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>47.0</time>
+                <pose>2.75 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>48.0</time>
+                <pose>3 3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>49.0</time>
+                <pose>3 2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>50.0</time>
+                <pose>3 2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>51.0</time>
+                <pose>3 2.25 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>65.0</time>
+                <pose>3 2 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>3 0 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>80.0</time>
+                <pose>3 -1 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>85.0</time>
+                <pose>3 -2 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>69.0</time>
+                <pose>3 -2.25 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>70.0</time>
+                <pose>3 -2.5 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>71.0</time>
+                <pose>3 -2.75 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>72.0</time>
+                <pose>3 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>73.0</time>
+                <pose>2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>74.0</time>
+                <pose>2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>75.0</time>
+                <pose>2.25 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>95.0</time>
+                <pose>2 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>100.0</time>
+                <pose>1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>105.0</time>
+                <pose>0 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>110.0</time>
+                <pose>-1 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>115.0</time>
+                <pose>-2 -3 0 0 0 0</pose>
+             </waypoint>
+             <!--waypoint>
+                <time>93.0</time>
+                <pose>-2.25 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>94.0</time>
+                <pose>-2.5 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>95.0</time>
+                <pose>-2.75 -3 0 0 0 0</pose>
+             </waypoint>
+             <waypoint>
+                <time>96.0</time>
+                <pose>-3 -3 0 0 0 0</pose>
+             </waypoint-->
+             <waypoint>
+                <time>125.0</time>
+                <pose>-3 -2 0 0 0 0</pose>
+             </waypoint>
+          </trajectory>
+        </script>
+    <plugin name="actor_collisions_plugin" filename="libActorCollisionsPlugin.so">
+    <scaling collision="wall_4_collision" scale="
+        0.55
+        0.01
+        0.12
+    "/>
+    </plugin>
+  </actor>
+    <physics name='default_physics' default='0' type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+  </world>
+</sdf>
