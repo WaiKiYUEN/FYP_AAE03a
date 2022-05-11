@@ -140,42 +140,7 @@ class SimpleDrone():
 
     def update_setpoint(self):
         pass
-    
-    '''
-     def SimpleMovement(self):
-        """ Perform a circlular movement for 20 seconds """
-
-        self.set_mode(0, 'OFFBOARD')
-        if (not self.UAV_state.armed):
-            mavros.command.arming(True)
-        
-        last_request = rospy.Time.now()
-        t0 = last_request
-        # enter the main loop
-        while (rospy.Time.now() - t0 < rospy.Duration(20)):
-            # print "Entered whiled loop"
-            if (self.UAV_state.mode != "OFFBOARD" and
-                    (rospy.Time.now() - last_request > rospy.Duration(5.0))):
-                self.set_mode(0, 'OFFBOARD')
-                print("enabling offboard mode")
-                last_request = rospy.Time.now()
-            else:
-                if (not self.UAV_state.armed and
-                        (rospy.Time.now() - last_request > rospy.Duration(5.0))):
-                    if (mavros.command.arming(True)):
-                        print("Vehicle armed")
-                    last_request = rospy.Time.now()
-
-            #setpoint_msg.pose.position.z = 3 + 2*math.sin(rospy.get_time() * 0.2)
-
-            # Make a circle
-            self.setpoint_msg.pose.position.x = 2 * math.sin(rospy.get_time() * 0.2)
-            self.setpoint_msg.pose.position.y = 2 * math.cos(rospy.get_time() * 0.2)
-            #print("Height: %f" % self.setpoint_msg.pose.position.z)
-            self.setpoint_local_pub.publish(self.setpoint_msg)
-            self.rate.sleep()
-    '''
-
+   
     def Hover(self):
         """
             Used to keep the altitude and position of the drone stable once activated
@@ -321,6 +286,7 @@ class SimpleDrone():
         """ Print the instructions"""
         print("----- available inputs -----")
         print("exit -> to close the swarm commander")
+        print("auto -> complete system automation")
         print("goto x y z yaw  -> uav will go to the specified location location")
         print("goto aruco [timeout] -> the uav will got to the aruco marker, timeOut is optional")
         print("land [x y z yaw] -> uav will land at its current position or at the optional x, y, z, yaw")
